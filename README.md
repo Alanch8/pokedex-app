@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# Pokédex App <img align="center" src="./public/pokeball.png" alt="TaskApp-Brand" width="35"/>
+# Pokédex App <img align="center" src="./public/pokeball.png" alt="Pokeball" width="35"/>
 
 ## Project setup
 
