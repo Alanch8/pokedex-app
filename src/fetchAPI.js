@@ -1,14 +1,15 @@
-const url = "https://pokeapi.co/api/v2/pokemon/";
+const pokemonContainer = document.querySelector(".pokemon-container");
 
-fetch(url)
-  .then((response) => response.json())
-  .then((data) => {
-    let element = document.getElementById("elem");
-    element.innerHTML = `
-    <h1>${data.name}</h1>
-    <p>#${data.id}</p>
-    <img src='${data.sprites.front_default}'/>
-    `;
-    console.log(data);
-  })
-  .catch((err) => console.log(err));
+function fetchPokemon(id) {
+  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+}
+
+function fetchPokemons(number) {
+    for (let i = 1; i <= number; i++) {
+        fetchPokemon(i);
+    }
+}
+
+fetchPokemons(9);
