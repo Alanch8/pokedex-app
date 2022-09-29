@@ -2,30 +2,20 @@
   <h1 v-if="!pokemon">Please wait...</h1>
 
   <div v-else>
-    <h1>Who's that Pokémon?</h1>
+    <h1>Pokédex</h1>
 
-    <PokemonPicture :pokemon-id="pokemon.id" :show-pokemon="showPokemon" />
+    <PokemonPicture :pokemon-id="pokemon.id" />
 
-    <PokemonOptions :pokemons="pokemonArr" @selection-pokemon="checkAnswer" />
-
-    <Pokedex />
-
-    <template v-if="showAnswer">
-      <h2 class="fade-in">{{ message }}</h2>
-      <button @click="newGame">Next</button>
-    </template>
   </div>
 </template>
 
 <script>
-import PokemonOptions from "../components/PokemonOptions.vue";
 import PokemonPicture from "../components/PokemonPicture.vue";
-import Pokedex from "../components/Pokedex.vue";
 
-import getPokemonOptions from "../helpers/getPokemonOptions.js";
+import getPokemonInfo from "../helpers/getPokemonInfo.js";
 
 export default {
-  components: { PokemonOptions, PokemonPicture, Pokedex },
+  components: { PokemonPicture },
   data() {
     return {
       pokemonArr: [],
@@ -37,33 +27,13 @@ export default {
   },
   methods: {
     async mixPokemonArray() {
-      this.pokemonArr = await getPokemonOptions();
+      this.pokemonArr = await getPokemonInfo();
 
       const rndInt = Math.floor(Math.random() * 4);
       this.pokemon = this.pokemonArr[rndInt];
     },
-    checkAnswer(selectedId) {
-      this.showPokemon = true;
-      this.showAnswer = true;
-      let pokemonName = this.pokemon.name;
-      pokemonName = pokemonName[0].toUpperCase() + pokemonName.slice(1);
-
-      if (selectedId === this.pokemon.id) {
-        this.message = `Right, ${pokemonName}!`;
-      } else {
-        this.message = `Oops, it was ${pokemonName}.`;
-      }
-    },
-    newGame() {
-      this.showPokemon = false;
-      this.showAnswer = false;
-      this.pokemonArr = [];
-      this.pokemon = null;
-      this.mixPokemonArray();
-    },
   },
   mounted() {
-    this.mixPokemonArray();
   },
 };
 </script>   
