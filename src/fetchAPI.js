@@ -1,16 +1,16 @@
 const pokemonContainer = document.querySelector(".pokemon-container");
 
-function fetchPokemon(id) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+async function fetchPokemon(id) {
+  await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
     .then((res) => res.json())
     .then((data) => {
       createPokemon(data);
     });
 }
 
-function fetchPokemons(number) {
+async function fetchPokemons(number) {
   for (let i = 1; i <= number; i++) {
-    fetchPokemon(i);
+    await fetchPokemon(i);
   }
 }
 
@@ -40,4 +40,4 @@ function createPokemon(pokemon) {
   pokemonContainer.appendChild(card);
 }
 
-fetchPokemons(1000);
+fetchPokemons(898);
