@@ -1,5 +1,5 @@
 <script setup>
-import Pokedex from "./components/Pokedex.vue";
+import Pokedex from "./pages/PokemonPage.vue";
 </script>
 
 <template>
