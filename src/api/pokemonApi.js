@@ -1,4 +1,6 @@
 const pokemonContainer = document.querySelector(".pokemon-container");
+const pokeImg =
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${this.pokemonId}.png";
 
 async function fetchPokemon(id) {
   await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
@@ -22,7 +24,8 @@ function createPokemon(pokemon) {
   spriteContainer.classList.add("img-container");
 
   const sprite = document.createElement("img");
-  sprite.src = pokemon.sprites.front_default;
+  sprite.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${pokemon.id}.png`;
+  sprite.classList.add("pokeImg");
 
   spriteContainer.appendChild(sprite);
 
@@ -40,4 +43,4 @@ function createPokemon(pokemon) {
   pokemonContainer.appendChild(card);
 }
 
-fetchPokemons(898);
+fetchPokemons(1000);

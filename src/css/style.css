@@ -57,6 +57,10 @@ h1 {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+.pokeImg{
+  width: 150px;
+}
 #app {
   max-width: 1280px;
   margin: 0 auto;

@@ -17,11 +17,5 @@ const count = ref(0);
   </div>
 </template>
 
-<style scoped>
-.pokedexTable {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-}
+<style>
 </style>
