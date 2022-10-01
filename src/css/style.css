@@ -3,10 +3,10 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-
+  /* 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,7 +22,7 @@ body {
   text-align: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #bdfaf57b;
+  background-color: antiquewhite;
 }
 
 h1 {
@@ -58,7 +58,7 @@ h1 {
   font-size: 1.2rem;
 }
 
-.pokeImg{
+.pokeImg {
   width: 150px;
 }
 #app {
@@ -68,9 +68,9 @@ h1 {
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-}
+} */

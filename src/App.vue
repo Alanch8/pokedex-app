@@ -6,5 +6,4 @@ import Pokedex from "./components/Pokedex.vue";
   <Pokedex msg="Pokédex" />
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

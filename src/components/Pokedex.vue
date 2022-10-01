@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import PokeCard from "./PokeCard.vue";
+import Modal from "./Modal.vue";
 
 defineProps({
   msg: String,
@@ -11,11 +11,8 @@ const count = ref(0);
 
 <template>
   <h1>{{ msg }}</h1>
-
-  <div class="pokemon-container">
-    
-  </div>
+  <Modal />
+  <div class="pokemon-container"></div>
 </template>
 
-<style>
-</style>
+<style></style>
