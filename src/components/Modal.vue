@@ -69,21 +69,21 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 import {
   TransitionRoot,
   TransitionChild,
   Dialog,
   DialogPanel,
   DialogTitle,
-} from "@headlessui/vue";
+} from '@headlessui/vue'
 
-const isOpen = ref(true);
+const isOpen = ref(true)
 
 function closeModal() {
-  isOpen.value = false;
+  isOpen.value = false
 }
 function openModal() {
-  isOpen.value = true;
+  isOpen.value = true
 }
 </script>
