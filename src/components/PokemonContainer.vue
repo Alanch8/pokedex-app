@@ -1,11 +1,5 @@
-<template>
-  <h1>hello world</h1>
-</template>
+<template></template>
 
-<script>
-// vfor here
-</script>
+<script setup></script>
 
-<style>
-
-</style>
+<style></style>

@@ -12,9 +12,9 @@ const count = ref(0);
 
 <template>
   <h1>{{ msg }}</h1>
-  <PokemonContainer/>
   <!-- <Modal /> -->
-  <!-- <div class="pokemon-container"></div> -->
+  <div class="pokemon-container"></div>
+  <!-- <PokemonContainer /> -->
 </template>
 
 <style></style>
